@@ -17,7 +17,7 @@ jobs:
       - name: 🟢 Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: 📦 Install dependencies
@@ -29,11 +29,11 @@ jobs:
       - name: 📂 Upload files via FTP to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER || secrets.SERVER }}
-          username: ${{ secrets.FTP_USERNAME || secrets.FRONTEND_USERNAME || secrets.USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD || secrets.FRONTEND_PASSWORD || secrets.PASSWORD }}
-          port: ${{ secrets.FTP_PORT || 21 }}
-          protocol: ${{ secrets.FTP_PROTOCOL || 'ftp' }}
+          server: ${{ secrets.FTP_SERVER || secrets.SERVER || vars.FTP_SERVER || vars.SERVER }}
+          username: ${{ secrets.FRONTEND_USERNAME || secrets.FTP_USERNAME || secrets.USERNAME || vars.FRONTEND_USERNAME || vars.FTP_USERNAME || vars.USERNAME }}
+          password: ${{ secrets.FRONTEND_PASSWORD || secrets.FTP_PASSWORD || secrets.PASSWORD || vars.FRONTEND_PASSWORD || vars.FTP_PASSWORD || vars.PASSWORD }}
+          port: ${{ secrets.FTP_PORT || vars.FTP_PORT || 21 }}
+          protocol: ${{ secrets.FTP_PROTOCOL || vars.FTP_PROTOCOL || 'ftp' }}
           local-dir: ./dist/
-          server-dir: ${{ secrets.REMOTE_DIR || '/' }}
+          server-dir: ${{ secrets.REMOTE_DIR || vars.REMOTE_DIR || '/' }}
           dangerous-clean-slate: false
