@@ -17,7 +17,7 @@ jobs:
       - name: 🟢 Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
           cache: 'npm'
 
       - name: 📦 Install dependencies
@@ -29,9 +29,9 @@ jobs:
       - name: 📂 Upload files via FTP to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER || secrets.SERVER || vars.FTP_SERVER || vars.SERVER }}
-          username: ${{ secrets.FRONTEND_USERNAME || secrets.FTP_USERNAME || secrets.USERNAME || vars.FRONTEND_USERNAME || vars.FTP_USERNAME || vars.USERNAME }}
-          password: ${{ secrets.FRONTEND_PASSWORD || secrets.FTP_PASSWORD || secrets.PASSWORD || vars.FRONTEND_PASSWORD || vars.FTP_PASSWORD || vars.PASSWORD }}
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST || secrets.SERVER || secrets.HOST || vars.FTP_SERVER || vars.FTP_HOST || vars.SERVER || vars.HOST }}
+          username: ${{ secrets.FRONTEND_USERNAME || secrets.FTP_USERNAME || secrets.FTP_USER || secrets.USERNAME || secrets.USER || vars.FRONTEND_USERNAME || vars.FTP_USERNAME || vars.FTP_USER || vars.USERNAME || vars.USER }}
+          password: ${{ secrets.FRONTEND_PASSWORD || secrets.FTP_PASSWORD || secrets.FTP_PASS || secrets.PASSWORD || secrets.PASS || vars.FRONTEND_PASSWORD || vars.FTP_PASSWORD || vars.FTP_PASS || vars.PASSWORD || vars.PASS }}
           port: ${{ secrets.FTP_PORT || vars.FTP_PORT || 21 }}
           protocol: ${{ secrets.FTP_PROTOCOL || vars.FTP_PROTOCOL || 'ftp' }}
           local-dir: ./dist/
