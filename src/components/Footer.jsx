@@ -25,7 +25,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold uppercase tracking-wider text-slate-200">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#home" className="hover:text-amber-400 transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-amber-400 transition-colors">About Anil Poudel</a></li>
+              <li><a href="#about" className="hover:text-amber-400 transition-colors">About Anish Poudel</a></li>
               <li><a href="#services" className="hover:text-amber-400 transition-colors">Auditing Services</a></li>
               <li><a href="#contact" className="hover:text-amber-400 transition-colors">Contact Us</a></li>
             </ul>
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
-          <p>© {currentYear} Anil Poudel. Registered Accountant & Auditor. All Rights Reserved.</p>
+          <p>© {currentYear} Anish Poudel. Registered Accountant & Auditor. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -21,7 +21,7 @@ export default function About() {
             Get To Know Me
           </h2>
           <p className="text-3xl sm:text-4xl font-extrabold text-slate-900">
-            About Anil Poudel
+            About Anish Poudel
           </p>
           <div className="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -76,7 +76,7 @@ export default function About() {
             </h3>
             
             <p className="text-slate-600 leading-relaxed font-light">
-              I am <strong className="text-slate-900 font-semibold">Anil Poudel</strong>, an accounting and auditing professional operating in Birtamode, Jhapa. I specialize in navigating the financial complexities of corporate tax laws, audit compliance, financial statement preparation, and administrative filings.
+              I am <strong className="text-slate-900 font-semibold">Anish Poudel</strong>, an accounting and auditing professional operating in Birtamode, Jhapa. I specialize in navigating the financial complexities of corporate tax laws, audit compliance, financial statement preparation, and administrative filings.
             </p>
 
             <p className="text-slate-600 leading-relaxed font-light">
