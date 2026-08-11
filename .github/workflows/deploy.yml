@@ -30,8 +30,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST || secrets.SERVER || secrets.HOST || vars.FTP_SERVER || vars.FTP_HOST || vars.SERVER || vars.HOST }}
-          username: ${{ secrets.FRONTEND_USERNAME || secrets.FTP_USERNAME || secrets.FTP_USER || secrets.USERNAME || secrets.USER || vars.FRONTEND_USERNAME || vars.FTP_USERNAME || vars.FTP_USER || vars.USERNAME || vars.USER }}
-          password: ${{ secrets.FRONTEND_PASSWORD || secrets.FTP_PASSWORD || secrets.FTP_PASS || secrets.PASSWORD || secrets.PASS || vars.FRONTEND_PASSWORD || vars.FTP_PASSWORD || vars.FTP_PASS || vars.PASSWORD || vars.PASS }}
+          username: ${{ secrets.FTP_FRONTEND_USERNAME || secrets.FRONTEND_USERNAME || secrets.FTP_USERNAME || secrets.FTP_USER || secrets.USERNAME || secrets.USER || vars.FTP_FRONTEND_USERNAME || vars.FRONTEND_USERNAME || vars.FTP_USERNAME || vars.FTP_USER || vars.USERNAME || vars.USER }}
+          password: ${{ secrets.FTP_FRONTEND_PASSWORD || secrets.FRONTEND_PASSWORD || secrets.FTP_PASSWORD || secrets.FTP_PASS || secrets.PASSWORD || secrets.PASS || vars.FTP_FRONTEND_PASSWORD || vars.FRONTEND_PASSWORD || vars.FTP_PASSWORD || vars.FTP_PASS || vars.PASSWORD || vars.PASS }}
           port: ${{ secrets.FTP_PORT || vars.FTP_PORT || 21 }}
           protocol: ${{ secrets.FTP_PROTOCOL || vars.FTP_PROTOCOL || 'ftp' }}
           local-dir: ./dist/
