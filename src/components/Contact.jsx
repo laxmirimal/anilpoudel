@@ -12,7 +12,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const phone = "9779807937130";
-    const text = `Hi Anish Poudel!%0A%0A*Name:* ${encodeURIComponent(formData.name)}%0A*Phone:* ${encodeURIComponent(formData.phone)}%0A*Service Requested:* ${encodeURIComponent(formData.service)}%0A%0A*Message:* ${encodeURIComponent(formData.message)}`;
+    const text = `Hi Anil Poudel!%0A%0A*Name:* ${encodeURIComponent(formData.name)}%0A*Phone:* ${encodeURIComponent(formData.phone)}%0A*Service Requested:* ${encodeURIComponent(formData.service)}%0A%0A*Message:* ${encodeURIComponent(formData.message)}`;
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   };
 
@@ -26,7 +26,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-3xl sm:text-4xl font-extrabold text-slate-900">
-            Contact Anish Poudel
+            Contact Anil Poudel
           </p>
           <div className="w-16 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
           <p className="text-slate-600 text-sm mt-4">

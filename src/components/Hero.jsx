@@ -72,7 +72,7 @@ export default function Hero() {
               <div className="relative bg-slate-800 p-3 rounded-3xl border border-slate-700 shadow-2xl">
                 <img
                   src="/anil.png"
-                  alt="Anish Poudel Portrait"
+                  alt="Anil Poudel Portrait"
                   className="w-full h-auto rounded-2xl object-cover shadow-md"
                 />
                 
